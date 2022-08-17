@@ -1,4 +1,37 @@
 * {
     box-sizing: border-box;
-    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+}
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: darkgrey;
 }
